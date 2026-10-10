@@ -1,0 +1,895 @@
+/* =========================================================
+   SIT313 Task P3 - DEV@Deakin React Styling
+   Preserves full Task P2 aesthetic (#176b4d) & adds P3 components
+========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #ffffff;
+}
+
+/* ---------------- Task P4 Navigation Bar ---------------- */
+.navbar-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #ededed;
+  border-bottom: 1px solid #d5d5d5;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.navbar-brand-link {
+  font-weight: 700;
+  font-size: 17px;
+  color: #222222;
+  text-decoration: none;
+  white-space: nowrap;
+  letter-spacing: -0.2px;
+  transition: color 0.2s;
+}
+
+.navbar-brand-link:hover {
+  color: #000000;
+}
+
+.navbar-search-bar {
+  flex: 1;
+  max-width: 580px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  background: #ffffff;
+  border: 1px solid #c8c8c8;
+  border-radius: 4px;
+  padding: 5px 12px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.navbar-search-bar:focus-within {
+  border-color: #888888;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-search-icon {
+  color: #777777;
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+
+.navbar-search-input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  background: transparent;
+  color: #333333;
+}
+
+.navbar-search-input::placeholder {
+  color: #888888;
+}
+
+.navbar-right-links {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  white-space: nowrap;
+}
+
+.navbar-link-btn {
+  background: none;
+  border: none;
+  font-size: 15px;
+  font-weight: 500;
+  color: #333333;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: background 0.15s, color 0.15s;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.navbar-link-btn:hover {
+  color: #111111;
+  background: rgba(0, 0, 0, 0.06);
+}
+
+.navbar-login-link {
+  font-weight: 600;
+}
+
+.navbar-user-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.navbar-user-name {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #176b4d;
+  background: rgba(23, 107, 77, 0.08);
+  padding: 4px 10px;
+  border-radius: 12px;
+}
+
+.navbar-logout-btn {
+  color: #c53030;
+  font-size: 13px;
+}
+
+.navbar-logout-btn:hover {
+  background: rgba(197, 48, 48, 0.08);
+  color: #9b2c2c;
+}
+
+.navbar-notice-bar {
+  background: #2b7de9;
+  color: white;
+  text-align: center;
+  padding: 6px 15px;
+  font-size: 13px;
+}
+
+/* ---------------- Hero Banner ---------------- */
+.banner {
+  position: relative;
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.banner img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+}
+
+.banner-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 0;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  font-size: 22px;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.banner:hover .banner-text {
+  transform: translateY(0);
+}
+
+/* ---------------- About Section ---------------- */
+.about {
+  max-width: 900px;
+  margin: auto;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.about h2 {
+  color: #176b4d;
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.about h3 {
+  color: #176b4d;
+  font-size: 24px;
+}
+
+.about img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.about p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.about hr {
+  width: 100px;
+  border: 0;
+  border-top: 3px solid #176b4d;
+  margin: 30px auto;
+}
+
+/* ---------------- My Projects ---------------- */
+.projects-section {
+  padding: 60px 5%;
+  background: #f5f8f6;
+}
+
+.projects-section h2 {
+  text-align: center;
+  color: #176b4d;
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.project-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+  padding-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.project-card h3 {
+  color: #176b4d;
+  padding: 0 20px;
+  margin-top: 18px;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  padding: 0 20px;
+  line-height: 1.6;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.project-btn-container {
+  padding: 0 20px;
+}
+
+.project-link-btn {
+  display: inline-block;
+  padding: 10px 18px;
+  background: #176b4d;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+
+.project-link-btn:hover {
+  background: #0e4330;
+}
+
+/* ---------------- Featured Articles & Tutorials (Task P3) ---------------- */
+.feature-section {
+  padding: 60px 5%;
+  text-align: center;
+}
+
+.feature-section:nth-of-type(even) {
+  background: #f5f8f6;
+}
+
+.feature-section h2 {
+  color: #176b4d;
+  font-size: 30px;
+  margin-bottom: 40px;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.content-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+  padding-bottom: 20px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.content-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.16);
+}
+
+.content-card img {
+  width: 100%;
+  height: 185px;
+  object-fit: cover;
+  display: block;
+}
+
+.content-card h3 {
+  color: #176b4d;
+  padding: 0 20px;
+  margin: 16px 0 8px;
+  font-size: 18px;
+}
+
+.content-card p {
+  padding: 0 20px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #555;
+  margin-top: 0;
+  margin-bottom: 16px;
+  flex-grow: 1;
+}
+
+.content-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  font-size: 14px;
+  border-top: 1px solid #f0f0f0;
+  padding-top: 12px;
+}
+
+.content-meta .rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #333;
+}
+
+.content-meta .author {
+  color: #666;
+  font-weight: 500;
+}
+
+.see-all-container {
+  margin-top: 35px;
+}
+
+.see-all-button {
+  padding: 10px 24px;
+  border: 0;
+  border-radius: 20px;
+  background: #9e9e9e;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background 0.2s ease;
+}
+
+.see-all-button:hover {
+  background: #757575;
+}
+
+/* ---------------- Gallery Section ---------------- */
+.gallery-section {
+  padding: 60px 5%;
+}
+
+.gallery-section h2 {
+  text-align: center;
+  color: #176b4d;
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 6px;
+  display: block;
+}
+
+.gallery img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.03);
+}
+
+/* ---------------- Contact Section ---------------- */
+.contact {
+  text-align: center;
+  padding: 60px 20px;
+  background: #f5f8f6;
+}
+
+.contact h2 {
+  color: #176b4d;
+  font-size: 32px;
+}
+
+.contact p {
+  font-size: 16px;
+  margin: 12px 0;
+}
+
+.contact a {
+  color: #176b4d;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+/* ---------------- Wireframe Footer (Task P3) ---------------- */
+.site-footer {
+  margin-top: 0;
+}
+
+/* Newsletter Strip */
+.newsletter-bar {
+  background: #e8e8e8;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding: 20px 25px;
+}
+
+.newsletter-bar-inner {
+  max-width: 950px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.newsletter-title {
+  font-weight: bold;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  color: #222;
+  white-space: nowrap;
+}
+
+.newsletter-form {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  max-width: 480px;
+}
+
+.newsletter-form input {
+  flex: 1;
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  background: #ffffff;
+  outline: none;
+}
+
+.newsletter-form button {
+  padding: 8px 18px;
+  font-size: 14px;
+  font-weight: 500;
+  background: #9e9e9e;
+  color: #ffffff;
+  border: 1px solid #888;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.newsletter-form button:hover {
+  background: #757575;
+}
+
+.newsletter-status {
+  max-width: 950px;
+  margin: 12px auto 0;
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+/* Footer 3 Columns */
+.footer-columns-wrapper {
+  background: #176b4d;
+  color: white;
+  padding: 45px 30px 25px;
+}
+
+.footer-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  max-width: 950px;
+  margin: auto;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-col h3 {
+  margin: 0 0 8px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.footer-col a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 15px;
+  transition: opacity 0.2s;
+}
+
+.footer-col a:hover {
+  text-decoration: underline;
+}
+
+.social-icons {
+  display: flex;
+  gap: 12px;
+  margin-top: 5px;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.18);
+  color: white;
+  transition: background 0.2s ease;
+}
+
+.social-icons a:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+/* Footer Bottom Bar */
+.footer-bottom-wrapper {
+  background: #176b4d;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 20px 30px 30px;
+}
+
+.footer-bottom {
+  max-width: 950px;
+  margin: auto;
+  text-align: center;
+}
+
+.footer-branding {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* ---------------- Responsive Media Queries ---------------- */
+@media (max-width: 900px) {
+  .projects,
+  .content-grid,
+  .gallery {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .navigation {
+    gap: 15px;
+    padding: 15px 10px;
+    flex-wrap: wrap;
+  }
+
+  .projects,
+  .content-grid,
+  .gallery {
+    grid-template-columns: 1fr !important;
+  }
+
+  .banner img {
+    height: 250px !important;
+  }
+
+  .newsletter-bar-inner {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+
+  .newsletter-form {
+    max-width: 100% !important;
+  }
+
+  .footer-columns {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .footer-links {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+}
+
+/* =========================================================
+   Task P4 - Site Layout & Authentication Styles
+========================================================= */
+
+.site-layout-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.site-main-content {
+  flex: 1;
+}
+
+/* ---------------- Auth Pages Layout ---------------- */
+.auth-page-container {
+  min-height: 520px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  background-color: #f7f9fa;
+}
+
+.auth-card {
+  background: #ffffff;
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  padding: 30px 35px 35px;
+  box-sizing: border-box;
+}
+
+.login-card {
+  max-width: 460px;
+  position: relative;
+}
+
+.signup-card {
+  max-width: 560px;
+}
+
+/* Top-right Sign up link matching wireframe */
+.auth-card-top-action {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 24px;
+}
+
+.signup-link {
+  color: #1a73e8;
+  text-decoration: underline;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.15s;
+}
+
+.signup-link:hover {
+  color: #0d47a1;
+}
+
+/* Blue Title on Registration page matching wireframe */
+.signup-title {
+  color: #1a73e8;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 25px;
+}
+
+/* Form row layout matching wireframe */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-group-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.form-group-row .form-label {
+  width: 150px;
+  font-size: 14px;
+  color: #333333;
+  font-weight: 500;
+  text-align: left;
+  flex-shrink: 0;
+}
+
+.form-group-row .form-input {
+  flex: 1;
+  padding: 9px 12px;
+  font-size: 14px;
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+  outline: none;
+  background-color: #ffffff;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group-row .form-input:focus {
+  border-color: #1a73e8;
+  box-shadow: 0 0 0 2px rgba(26, 115, 232, 0.15);
+}
+
+/* Blue Primary Button matching wireframe */
+.auth-primary-btn {
+  background-color: #1a73e8;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 16px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 100%;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.auth-primary-btn:hover {
+  background-color: #1558b0;
+}
+
+.auth-primary-btn:disabled {
+  background-color: #9cbfee;
+  cursor: not-allowed;
+}
+
+/* Feedback alerts */
+.auth-alert {
+  padding: 10px 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  line-height: 1.4;
+  margin-bottom: 18px;
+}
+
+.error-alert {
+  background-color: #fde8e8;
+  color: #c53030;
+  border: 1px solid #f8b4b4;
+}
+
+.success-alert {
+  background-color: #def7ec;
+  color: #03543f;
+  border: 1px solid #bcf0da;
+}
+
+.info-alert {
+  background-color: #e8f0fe;
+  color: #1967d2;
+  border: 1px solid #d2e3fc;
+}
+
+.auth-card-footer {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 13px;
+  color: #666666;
+}
+
+.login-switch-link {
+  color: #1a73e8;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+@media (max-width: 600px) {
+  .navbar-inner {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .navbar-search-bar {
+    order: 3;
+    max-width: 100%;
+    width: 100%;
+  }
+  .form-group-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+  .form-group-row .form-label {
+    width: auto;
+  }
+  .form-group-row .form-input {
+    width: 100%;
+  }
+}

@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sanchit Soodan - Personal Website & DEV@Deakin</title>
+
+    <style>
+
+        .banner-text {
+            position:absolute;
+            bottom:0;
+            left:0;
+            width:100%;
+            padding:15px 0;
+            text-align:center;
+            background:rgba(0,0,0,0.7);
+            color:white;
+            font-size:22px;
+            transform:translateY(100%);
+            transition:0.3s;
+        }
+
+        .banner:hover .banner-text {
+            transform:translateY(0);
+        }
+
+        @media (max-width: 900px) {
+            .projects {
+                grid-template-columns:repeat(2,1fr) !important;
+            }
+
+            .gallery {
+                grid-template-columns:repeat(2,1fr) !important;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .projects {
+                grid-template-columns:1fr !important;
+            }
+
+            .gallery {
+                grid-template-columns:1fr !important;
+            }
+
+            .banner img {
+                height:250px !important;
+            }
+
+            .newsletter-bar-inner {
+                flex-direction: column !important;
+                align-items: stretch !important;
+            }
+
+            .newsletter-bar-form {
+                max-width: 100% !important;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body style="margin:0; font-family:Arial,sans-serif; color:#333;">
+
+
+    <nav style="
+        display:flex;
+        justify-content:center;
+        gap:40px;
+        padding:20px;
+        background:white;
+        border-bottom:1px solid #eee;
+    ">
+
+        <a href="#about"
+           style="text-decoration:none;color:#176b4d;font-weight:bold;">
+            About
+        </a>
+
+        <a href="#work"
+           style="text-decoration:none;color:#176b4d;font-weight:bold;">
+            Work
+        </a>
+
+        <a href="#gallery"
+           style="text-decoration:none;color:#176b4d;font-weight:bold;">
+            Gallery
+        </a>
+
+        <a href="#newsletter"
+           style="text-decoration:none;color:#176b4d;font-weight:bold;">
+            Newsletter
+        </a>
+
+        <a href="#contact"
+           style="text-decoration:none;color:#176b4d;font-weight:bold;">
+            Contact
+        </a>
+
+    </nav>
+
+
+    <section class="banner" style="
+        position:relative;
+        max-width:1200px;
+        margin:auto;
+        overflow:hidden;
+    ">
+
+        <img
+            src="https://i.ibb.co/fGvYtZJs/banner.avif"
+            alt="Sanchit's banner"
+            style="
+                width:100%;
+                height:400px;
+                object-fit:cover;
+                display:block;
+            "
+        >
+
+        <div class="banner-text">
+            Hey, I'm Sanchit
+        </div>
+
+    </section>
+
+
+    <section id="about" style="
+        text-align:center;
+        padding:60px 20px;
+        max-width:900px;
+        margin:auto;
+    ">
+
+        <h2 style="
+            color:#176b4d;
+            font-size:32px;
+        ">
+            About Me
+        </h2>
+
+
+        <a href="https://i.ibb.co/5X6kBhmy/profile.png" target="_blank">
+
+            <img
+                src="https://i.ibb.co/5X6kBhmy/profile.png"
+                alt="Sanchit Soodan"
+                style="
+                    width:150px;
+                    height:150px;
+                    object-fit:cover;
+                    border-radius:50%;
+                    margin:20px;
+                "
+            >
+
+        </a>
+
+
+        <h3 style="color:#176b4d;">
+            Sanchit Soodan
+        </h3>
+
+
+        <p style="
+            font-size:18px;
+            line-height:1.6;
+        ">
+            I am a CSE (AI/ML) student interested in programming,
+            artificial intelligence, web development and technology.
+            I enjoy learning through projects and exploring how
+            technology can be used to solve real-world problems.
+        </p>
+
+
+        <hr style="
+            width:100px;
+            border:0;
+            border-top:3px solid #176b4d;
+            margin:30px auto;
+        ">
+
+
+        <h3 style="
+            color:#176b4d;
+            font-size:24px;
+        ">
+            Here's what I've worked on
+        </h3>
+
+    </section>
+
+
+    <section id="work" style="
+        padding:60px 5%;
+        background:#f5f8f6;
+    ">
+
+        <h2 style="
+            text-align:center;
+            color:#176b4d;
+            margin-bottom:40px;
+        ">
+            My Projects
+        </h2>
+
+
+        <div class="projects" style="
+            display:grid;
+            grid-template-columns:repeat(3,1fr);
+            gap:30px;
+            max-width:1200px;
+            margin:auto;
+        ">
+
+
+            <div style="
+                background:white;
+                border-radius:10px;
+                overflow:hidden;
+                box-shadow:0 3px 10px rgba(0,0,0,0.12);
+                padding-bottom:25px;
+            ">
+
+                <a href="https://i.ibb.co/xwx24Q1/project1.jpg" target="_blank">
+
+                    <img
+                        src="https://i.ibb.co/xwx24Q1/project1.jpg"
+                        alt="LDR Solar Tracking System"
+                        style="
+                            width:100%;
+                            height:200px;
+                            object-fit:cover;
+                        "
+                    >
+
+                </a>
+
+
+                <h3 style="
+                    color:#176b4d;
+                    padding:0 20px;
+                ">
+                    LDR Based Solar Tracking System
+                </h3>
+
+
+                <p style="
+                    padding:0 20px;
+                    line-height:1.6;
+                ">
+                    Designed and built a solar panel system using
+                    Light Dependent Resistors (LDRs) to track
+                    sunlight throughout the day. The system uses
+                    LDRs and a servo motor to adjust the panel.
+                </p>
+
+
+                <p style="padding:0 20px;">
+                    <b>Technologies:</b>
+                    LDR, Servo Motor, Arduino
+                </p>
+
+            </div>
+
+
+            <div style="
+                background:white;
+                border-radius:10px;
+                overflow:hidden;
+                box-shadow:0 3px 10px rgba(0,0,0,0.12);
+                padding-bottom:25px;
+            ">
+
+                <a href="https://i.ibb.co/sJwP7LbD/project2.jpg" target="_blank">
+
+                    <img
+                        src="https://i.ibb.co/sJwP7LbD/project2.jpg"
+                        alt="BYTE the Clue"
+                        style="
+                            width:100%;
+                            height:200px;
+                            object-fit:cover;
+                        "
+                    >
+
+                </a>
+
+
+                <h3 style="
+                    color:#176b4d;
+                    padding:0 20px;
+                ">
+                    BYTE the Clue
+                </h3>
+
+
+                <p style="
+                    padding:0 20px;
+                    line-height:1.6;
+                ">
+                    Participated in BYTE the Clue at Chitkara
+                    University with Team Byte Storm. We created
+                    "The Evolution of Sound", a poster showing
+                    how headphones have evolved from early
+                    designs to modern wireless and smart headsets.
+                </p>
+
+
+                <p style="
+                    padding:0 20px;
+                    line-height:1.6;
+                ">
+                    Our team secured <b>3rd position</b> in the
+                    Gadget Genius Award.
+                </p>
+
+
+                <a
+                    href="https://www.linkedin.com/posts/sanchit-soodan-ab62b2283_chitkarauniversity-bytetheclue-teambytestorm-ugcPost-7384232824536547329-A4Qd/"
+                    target="_blank"
+                    style="
+                        display:inline-block;
+                        margin-left:20px;
+                        padding:10px 15px;
+                        background:#176b4d;
+                        color:white;
+                        text-decoration:none;
+                        border-radius:5px;
+                    "
+                >
+                    View Post
+                </a>
+
+            </div>
+
+
+            <div style="
+                background:white;
+                border-radius:10px;
+                overflow:hidden;
+                box-shadow:0 3px 10px rgba(0,0,0,0.12);
+                padding-bottom:25px;
+            ">
+
+                <a href="https://i.ibb.co/TDC4Fp6R/project3.jpg" target="_blank">
+
+                    <img
+                        src="https://i.ibb.co/TDC4Fp6R/project3.jpg"
+                        alt="Create and Conquer Hackathon"
+                        style="
+                            width:100%;
+                            height:200px;
+                            object-fit:cover;
+                        "
+                    >
+
+                </a>
+
+
+                <h3 style="
+                    color:#176b4d;
+                    padding:0 20px;
+                ">
+                    Create &amp; Conquer Hackathon
+                </h3>
+
+
+                <p style="
+                    padding:0 20px;
+                    line-height:1.6;
+                ">
+                    Participated in the Create &amp; Conquer
+                    Hackathon at TIET, Patiala. Our team worked
+                    together to develop a technology-based
+                    solution during the hackathon.
+                </p>
+
+
+                <p style="padding:0 20px;">
+                    <b>Team:</b> Ctrl+Alt+Win
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section id="gallery" style="
+        padding:60px 5%;
+    ">
+
+        <h2 style="
+            text-align:center;
+            color:#176b4d;
+            margin-bottom:40px;
+        ">
+            My Gallery
+        </h2>
+
+
+        <div class="gallery" style="
+            display:grid;
+            grid-template-columns:repeat(3,1fr);
+            gap:10px;
+            max-width:1200px;
+            margin:auto;
+        ">
+
+
+            <a href="https://i.ibb.co/gMqqn017/campus.jpg" target="_blank">
+
+                <img
+                    src="https://i.ibb.co/gMqqn017/campus.jpg"
+                    alt="Campus"
+                    style="
+                        width:100%;
+                        height:220px;
+                        object-fit:cover;
+                        border-radius:5px;
+                    "
+                >
+
+            </a>
+
+
+            <a href="https://i.ibb.co/N677bLkb/hostel.jpg" target="_blank">
+
+                <img
+                    src="https://i.ibb.co/N677bLkb/hostel.jpg"
+                    alt="Hostel"
+                    style="
+                        width:100%;
+                        height:220px;
+                        object-fit:cover;
+                        border-radius:5px;
+                    "
+                >
+
+            </a>
+
+
+            <a href="https://i.ibb.co/h1X6dwHz/moon.jpg" target="_blank">
+
+                <img
+                    src="https://i.ibb.co/h1X6dwHz/moon.jpg"
+                    alt="Moon"
+                    style="
+                        width:100%;
+                        height:220px;
+                        object-fit:cover;
+                        border-radius:5px;
+                    "
+                >
+
+            </a>
+
+
+            <a href="https://i.ibb.co/XZBF61W4/arduino.jpg" target="_blank">
+
+                <img
+                    src="https://i.ibb.co/XZBF61W4/arduino.jpg"
+                    alt="Arduino project"
+                    style="
+                        width:100%;
+                        height:220px;
+                        object-fit:cover;
+                        border-radius:5px;
+                    "
+                >
+
+            </a>
+
+
+            <a href="https://i.ibb.co/HL0rd7gF/mountain.jpg" target="_blank">
+
+                <img
+                    src="https://i.ibb.co/HL0rd7gF/mountain.jpg"
+                    alt="Mountain valley"
+                    style="
+                        width:100%;
+                        height:220px;
+                        object-fit:cover;
+                        border-radius:5px;
+                    "
+                >
+
+            </a>
+
+
+            <a href="https://i.ibb.co/wNpGyQsK/eye.jpg" target="_blank">
+
+                <img
+                    src="https://i.ibb.co/wNpGyQsK/eye.jpg"
+                    alt="Eye"
+                    style="
+                        width:100%;
+                        height:220px;
+                        object-fit:cover;
+                        border-radius:5px;
+                    "
+                >
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <section id="contact" style="
+        text-align:center;
+        padding:60px 20px;
+        background:#f5f8f6;
+    ">
+
+        <h2 style="color:#176b4d;">
+            Contact Me
+        </h2>
+
+
+        <p>
+            Email:
+            <a
+                href="mailto:sanchitsooodan2405@gmail.com"
+                style="color:#176b4d;"
+            >
+                sanchitsooodan2405@gmail.com
+            </a>
+        </p>
+
+
+        <p>
+            LinkedIn:
+            <a
+                href="https://www.linkedin.com/in/sanchit-soodan-ab62b2283"
+                target="_blank"
+                style="color:#176b4d;"
+            >
+                Sanchit Soodan
+            </a>
+        </p>
+
+
+        <p>
+            GitHub:
+            <a
+                href="https://github.com/sanchitsoodan"
+                target="_blank"
+                style="color:#176b4d;"
+            >
+                github.com/sanchitsoodan
+            </a>
+        </p>
+
+    </section>
+
+
+    <!-- ============================================================ -->
+    <!-- SIGN-UP FEATURE (SIT313 Task P2 - Page 2 Tasksheet Design)   -->
+    <!-- ============================================================ -->
+    <section id="newsletter" style="
+        background: #e8e8e8;
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        padding: 20px 25px;
+    ">
+        <div class="newsletter-bar-inner" style="
+            max-width: 950px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+        ">
+            <span style="
+                font-weight: bold;
+                font-size: 15px;
+                letter-spacing: 0.5px;
+                color: #222;
+                white-space: nowrap;
+            ">
+                SIGN UP FOR OUR DAILY INSIDER
+            </span>
+
+            <form id="newsletterForm" class="newsletter-bar-form" style="
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                flex: 1;
+                max-width: 480px;
+                margin: 0;
+            ">
+                <input
+                    type="email"
+                    id="newsletterEmail"
+                    name="email"
+                    placeholder="Enter your email"
+                    required
+                    style="
+                        flex: 1;
+                        padding: 8px 12px;
+                        font-size: 14px;
+                        border: 1px solid #aaa;
+                        border-radius: 3px;
+                        background: #fff;
+                        outline: none;
+                    "
+                >
+                <button
+                    type="submit"
+                    id="subscribeBtn"
+                    style="
+                        padding: 8px 18px;
+                        font-size: 14px;
+                        font-weight: 500;
+                        background: #9e9e9e;
+                        color: #ffffff;
+                        border: 1px solid #888;
+                        border-radius: 3px;
+                        cursor: pointer;
+                        transition: background 0.2s;
+                    "
+                    onmouseover="this.style.background='#757575'"
+                    onmouseout="this.style.background='#9e9e9e'"
+                >
+                    Subscribe
+                </button>
+            </form>
+        </div>
+
+        <!-- Real-time Status Alert -->
+        <div id="newsletterMessage" style="
+            display: none;
+            max-width: 950px;
+            margin: 12px auto 0 auto;
+            padding: 10px 15px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 500;
+            text-align: center;
+        "></div>
+    </section>
+
+
+    <footer style="
+        text-align:center;
+        padding:20px;
+        background:#176b4d;
+        color:white;
+    ">
+
+        <p>
+            © 2026 Sanchit Soodan | SIT313 Task P2 - DEV@Deakin
+        </p>
+
+    </footer>
+
+
+    <!-- Asynchronous Newsletter Subscription Fetch API Script -->
+    <script>
+        const newsletterForm = document.getElementById('newsletterForm');
+        const emailInput = document.getElementById('newsletterEmail');
+        const subscribeBtn = document.getElementById('subscribeBtn');
+        const messageDiv = document.getElementById('newsletterMessage');
+
+        newsletterForm.addEventListener('submit', async function (event) {
+            // Prevent standard page reload
+            event.preventDefault();
+
+            const email = emailInput.value.trim();
+            if (!email) return;
+
+            // Loading state
+            subscribeBtn.disabled = true;
+            subscribeBtn.innerText = 'Subscribing...';
+            messageDiv.style.display = 'block';
+            messageDiv.style.background = '#e2e3e5';
+            messageDiv.style.color = '#383d41';
+            messageDiv.style.border = '1px solid #d6d8db';
+            messageDiv.innerText = 'Connecting to backend...';
+
+            try {
+                // Send email to backend Express route
+                const response = await fetch('/subscribe', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ email: email })
+                });
+
+                const data = await response.json();
+
+                if (response.ok && data.success) {
+                    // Success (HTTP 200/202)
+                    messageDiv.style.background = '#d4edda';
+                    messageDiv.style.color = '#155724';
+                    messageDiv.style.border = '1px solid #c3e6cb';
+                    messageDiv.innerText = '✓ ' + data.message;
+                    emailInput.value = ''; // Reset input
+                } else {
+                    // Error response
+                    messageDiv.style.background = '#f8d7da';
+                    messageDiv.style.color = '#721c24';
+                    messageDiv.style.border = '1px solid #f5c6cb';
+                    messageDiv.innerText = '✗ ' + (data.message || 'Subscription failed. Please try again.');
+                }
+            } catch (error) {
+                console.error('Fetch error:', error);
+                messageDiv.style.background = '#f8d7da';
+                messageDiv.style.color = '#721c24';
+                messageDiv.style.border = '1px solid #f5c6cb';
+                messageDiv.innerText = '✗ Error connecting to backend server. Ensure server is running at http://localhost:3000.';
+            } finally {
+                subscribeBtn.disabled = false;
+                subscribeBtn.innerText = 'Subscribe';
+            }
+        });
+    </script>
+
+</body>
+
+</html>
